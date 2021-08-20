@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2021, Ibnsina Pharma
+  ~ All rights reserved.
+  -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/analyse_fragment">
+    <fragment
+        android:id="@+id/analyse_fragment"
+        android:name="com.banquemisr.nutritionanalysis.features.analysis.AnalyseFragment"
+        tools:layout="@layout/fragment_analyse">
+    </fragment>
+</navigation>/
