@@ -10,6 +10,29 @@
     <fragment
         android:id="@+id/analyse_fragment"
         android:name="com.banquemisr.nutritionanalysis.features.analysis.AnalyseFragment"
-        tools:layout="@layout/fragment_analyse">
+        tools:layout="@layout/fragment_analyse"
+        android:label="@string/app_name">
+        <action android:id="@+id/show_ingredients"
+            app:destination="@+id/ingredients"/>
     </fragment>
-</navigation>/
+    <fragment
+        android:id="@+id/ingredients"
+        android:name="com.banquemisr.nutritionanalysis.features.ingredients.IngredientsListFragment"
+        tools:layout="@layout/fragment_ingredients"
+        android:label="@string/ingredients">
+        <action android:id="@+id/show_total"
+            app:destination="@+id/total"/>
+        <argument
+            android:name="data"
+            app:argType="com.banquemisr.entities.response.RecipeResponse"/>
+    </fragment>
+    <fragment
+        android:id="@+id/total"
+        android:name="com.banquemisr.nutritionanalysis.features.total.TotalFragment"
+        tools:layout="@layout/fragment_total"
+        android:label="@string/total">
+        <argument
+            android:name="data"
+            app:argType="com.banquemisr.entities.response.RecipeResponse"/>
+    </fragment>
+</navigation>
