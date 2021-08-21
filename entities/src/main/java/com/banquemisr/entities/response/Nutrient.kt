@@ -7,9 +7,17 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Nutrient(
     @SerializedName("label")
-    val label: String? = "",
+    val label: String,
     @SerializedName("quantity")
-    val quantity: Double? = 0.0,
+    val quantity: Double,
     @SerializedName("unit")
-    val unit: String? = ""
-) : Parcelable
+    val _unit: String
+) : Parcelable{
+    val unit : String
+    get() = if (_unit.isNullOrEmpty()) "" else _unit
+    var labelRes : Int = 0
+    fun setLabelResource(labelRes : Int): Nutrient {
+        this.labelRes = labelRes
+        return this
+    }
+}
