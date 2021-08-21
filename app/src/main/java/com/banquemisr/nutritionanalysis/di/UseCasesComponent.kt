@@ -1,7 +1,6 @@
 package com.banquemisr.nutritionanalysis.di
 
 import com.banquemisr.usecases.dagger.UseCasesModule
-import com.ibnsina.usecases.dagger.UseCasesModule
 import dagger.Component
 import dagger.hilt.DefineComponent
 import dagger.hilt.components.SingletonComponent

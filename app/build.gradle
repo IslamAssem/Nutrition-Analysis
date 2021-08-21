@@ -86,4 +86,5 @@ dependencies {
     implementation project(path: ':usecases')
     testImplementation deps.arch_core.testing
     androidTestImplementation  deps.navigation.test
+    implementation deps.glide.runtime
 }

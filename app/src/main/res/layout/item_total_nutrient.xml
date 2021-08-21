@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.banquemisr.entities.response.Nutrient"/>
+        <import type="java.text.DecimalFormat"/>
+        <variable
+            name="nutrient"
+            type="Nutrient" />
+        <variable
+            name="decimalFormatter"
+            type="DecimalFormat" />
+    </data>
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="1dp"
+        app:strokeColor="#c3c3c3"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#3c3c3c"
+                android:text='@{nutrient.labelRes}'
+                tools:text="1111"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3c3c3c"
+                android:layout_marginStart="5dp"
+                android:text='@{decimalFormatter.format(nutrient.quantity) + " " + nutrient.unit}'
+                tools:text="1111"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
