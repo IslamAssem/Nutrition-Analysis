@@ -43,11 +43,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     //------ Retrofit ------//
-    implementation deps.squareup.retrofit2
-    implementation deps.squareup.googlegson
-    implementation deps.squareup.converter
-    implementation deps.squareup.okhttp
-    implementation deps.squareup.interceptor
+    api deps.squareup.retrofit2
+    api deps.squareup.googlegson
+    api deps.squareup.converter
+    api deps.squareup.okhttp
+    api deps.squareup.interceptor
 
     //------Coroutines ------//
     implementation deps.coroutines.core
